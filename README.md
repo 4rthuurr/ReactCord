@@ -1,4 +1,4 @@
-# ReactCord - Responda mensagens do Discord com Reações 😯
+# ReactCord - Responda mensagens com Reações 😯
 
 __Dica:__ Caso você tenha alguma dúvida ou problema para instalar, assista ao [Tutorial](https://yt.be/) de utilização.
 
