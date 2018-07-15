@@ -12,7 +12,7 @@ var queue = [];
 var reactQueue = [];
 var working = false;
 var current = undefined;
-var charPos = text => text.split('')
+var charPos = text => text.toLowerCase().split('')
 	.map(x => "abcdefghijklmnopqrstuvwxyz".split('')
 		.indexOf(x) + 1);
 var isAlphabetChars = text => new RegExp("^[a-zA-Z]*$")
