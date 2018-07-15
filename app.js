@@ -61,7 +61,7 @@ setInterval(function() {
 		msgQueue.shift();
 		working = true;
 	}
-}, 2000);
+}, sleep);
 
 setInterval(function() {
 	if (message !== undefined) {
