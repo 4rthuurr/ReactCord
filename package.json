@@ -1,0 +1,28 @@
+{
+  "name": "reactcord",
+  "version": "1.0.0",
+  "description": "Responda mensagens do Discord automaticamente com reações",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4rthuurr/ReactCord.git"
+  },
+  "keywords": [
+    "discordjs",
+    "reactions",
+    "brazil"
+  ],
+  "author": "4rthuurr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4rthuurr/ReactCord/issues"
+  },
+  "homepage": "https://github.com/4rthuurr/ReactCord#readme"
+}
