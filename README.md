@@ -1,4 +1,5 @@
 # ReactCord - Responda mensagens com Reações 😯
+<img src="https://i.imgur.com/cPaHNii.gif">
 
 __Dica:__ Caso você tenha alguma dúvida ou problema para instalar, assista ao [Tutorial](https://yt.be/) de utilização.
 
