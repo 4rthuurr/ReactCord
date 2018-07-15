@@ -8,10 +8,10 @@ const txt = ""; /* Texto da sua reação */
 const react = 1000; /* Delay desejado entre reações (ms) */
 const sleep = 2000; /* Delay desejado entre mensagens (ms) */
 
-var queue = [];
+var msgQueue = [];
 var reactQueue = [];
 var working = false;
-var current = undefined;
+var message = undefined;
 var charPos = text => text.toLowerCase().split('')
 	.map(x => "abcdefghijklmnopqrstuvwxyz".split('')
 		.indexOf(x) + 1);
@@ -45,31 +45,30 @@ if (!uniqueChars(txt)) console.info('[!] Sua reação desejada contém caractere
 client.on('message', msg => {
 	if (msg.author != client.user) {
 		if (msg.channel.type == "dm" || msg.channel.type == "group") {
-			queue.push(msg);
+			msgQueue.push(msg);
 		}
 	}
 });
 
 setInterval(function() {
-	if (working || queue.length == 0) return;
-	if (current === undefined) {
+	if (working || msgQueue.length == 0) return;
+	if (message === undefined) {
 		for (i = 0; i < txt.length; i++) {
 			reactQueue.push(letters[charPos(txt[i]) - 1]);
 		}
 		reactQueue = Array.from(new Set(reactQueue));
-		current = queue[0];
-		queue.shift();
+		message = msgQueue[0];
+		msgQueue.shift();
 		working = true;
 	}
 }, 2000);
 
 setInterval(function() {
-	if (current !== undefined) {
-		current.react(reactQueue[0])
-			.catch(O_o => {});
-		reactQueue.shift();
+	if (message !== undefined) {
+		message.react(reactQueue[0])
+			.then(reactQueue.shift()).catch(O_o => {});
 		if (reactQueue.length == 0) {
-			current = undefined;
+			message = undefined;
 			setTimeout(function() {
 				working = false;
 			}, sleep);
