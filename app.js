@@ -5,8 +5,8 @@ const letters = ["🇦", "🇧", "🇨", "🇩", "🇪", "🇫", "🇬", "🇭",
 const token = ""; /* Seu token do Discord */
 const txt = ""; /* Texto da sua reação */
 
-const react = 1000; /* Delay desejado entre reações (ms) */
-const sleep = 2000; /* Delay desejado entre mensagens (ms) */
+const react = 500; /* Delay desejado entre reações (ms) */
+const sleep = 1000; /* Delay desejado entre mensagens (ms) */
 
 var msgQueue = [];
 var reactQueue = [];
